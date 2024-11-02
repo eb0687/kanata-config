@@ -132,41 +132,41 @@
 )
 
 (deflayer navigation
-  _    @mwu @mwd @mwl @mwr _    _    _    _    _    _    _    _    _   
+  _    @mwu @mwd @mwl @mwr _    _    _    _    _    _    _    _    _
   _    mltp @mau mrtp $rdo _    $cpy $und _    _    $pst _    _    _
-  _    @mal @mad @mar _    _    $l   $d   $u   $r   _    _    _   
-  _    _    $cut _    _    _    home pgdn pgup end  _    _   
-  _    _    _              @bak           _    _   
+  _    @mal @mad @mar _    _    $l   $d   $u   $r   _    _    _
+  _    _    $cut _    _    _    home pgdn pgup end  _    _
+  _    _    _              @bak           _    _
 )
 
 (deflayer numbers
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    @7   @8   @9   @-   _    @fun @sym _    _    _    _    _
-  @cwc @0   @4   @5   @6   @=   _    _    _    _    _    _    _   
-  _    _    @1   @2   @3   _    _    @mse _    _    _    _   
-  _    _    _              _              _    _   
+  @cwc @0   @4   @5   @6   @=   _    _    _    _    _    _    _
+  _    _    @1   @2   @3   _    _    @mse _    _    _    _
+  _    _    _              _              _    _
 )
 
 (deflayer function
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    f12  f7   f8   f9   _    _    _    _    _    _    _    _    _
-  _    f11  f4   f5   f6   _    _    _    _    _    _    _    _   
-  _    f10  f1   f2   f3   _    _    _    _    _    _    _   
-  _    _    _              _              _    _   
+  _    f11  f4   f5   f6   _    _    _    _    _    _    _    _
+  _    f10  f1   f2   f3   _    _    _    _    _    _    _
+  _    _    _              _              _    _
 )
 
 (deflayer symbols
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    @grv $rb  $lb  _    _    _    _    _    _    _    _    _    _
-  _    _    @rsb @lsb _    _    _    _    _    _    _    _    _   
-  _    _    @\   @/   _    _    _    _    _    _    _    _   
-  _    _    _              _              _    _   
+  _    _    @rsb @lsb _    _    _    _    _    _    _    _    _
+  _    _    @\   @/   _    _    _    _    _    _    _    _
+  _    _    _              _              _    _
 )
 
 (deflayer mouse
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    mltp @mau mrtp _    _    _    _    _    _    _    _    _
-  _    _    @mal @mad @mar _    _    _    _    _    _    _    _   
-  _    _    _    _    _    _    _    _    _    _    _    _   
-  _    _    _              _              _    _   
+  _    _    @mal @mad @mar _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _
 )
