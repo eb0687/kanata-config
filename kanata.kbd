@@ -1,0 +1,143 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            rmet rctl
+)
+
+#|
+(deflayer
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+|#
+
+(defvar
+  tap-time 150
+  hold-time 200
+  l left
+  r rght
+  u up
+  d down
+  rb S-9
+  lb S-0
+  cut C-x
+  cpy C-c
+  pst C-v
+  und C-S-z
+  rdo C-S-y
+)
+
+;; esc and navigation layer toggle
+(defalias nav (layer-while-held navigation))
+(defalias cap (tap-hold 200 200 esc @nav))
+
+;; number layer toggle
+(defalias num (layer-while-held numbers))
+
+;; function layer toggle
+(defalias fun (layer-while-held function))
+
+;; symbols layer toggle
+(defalias sym (layer-while-held symbols))
+
+;; home row mods
+(defalias
+  a (tap-hold $tap-time $hold-time a lctl)
+  s (tap-hold $tap-time $hold-time s lalt)
+  d (tap-hold $tap-time $hold-time d lmet)
+  f (tap-hold $tap-time $hold-time f lsft)
+  j (tap-hold $tap-time $hold-time j rsft)
+  k (tap-hold $tap-time $hold-time k rmet)
+  l (tap-hold $tap-time $hold-time l ralt)
+  ; (tap-hold $tap-time $hold-time ; rctl)
+)
+
+;; autoshift
+(defalias
+  1 (tap-hold-press-timeout $tap-time $hold-time 1 1 (macro S-1))
+  2 (tap-hold-press-timeout $tap-time $hold-time 2 2 (macro S-2))
+  3 (tap-hold-press-timeout $tap-time $hold-time 3 3 (macro S-3))
+  4 (tap-hold-press-timeout $tap-time $hold-time 4 4 (macro S-4))
+  5 (tap-hold-press-timeout $tap-time $hold-time 5 5 (macro S-5))
+  6 (tap-hold-press-timeout $tap-time $hold-time 6 6 (macro S-6))
+  7 (tap-hold-press-timeout $tap-time $hold-time 7 7 (macro S-7))
+  8 (tap-hold-press-timeout $tap-time $hold-time 8 8 (macro S-8))
+  9 (tap-hold-press-timeout $tap-time $hold-time 9 9 (macro S-9))
+  0 (tap-hold-press-timeout $tap-time $hold-time 0 0 (macro S-0))
+  - (tap-hold-press-timeout $tap-time $hold-time - - (macro S--))
+  = (tap-hold-press-timeout $tap-time $hold-time = = (macro S-=))
+  grv (tap-hold-press-timeout $tap-time $hold-time grv grv (macro S-grv))
+  rsb (tap-hold-press-timeout $tap-time $hold-time [ [ (macro S-[))
+  lsb (tap-hold-press-timeout $tap-time $hold-time ] ] (macro S-]))
+  bak (tap-hold-press-timeout $tap-time $hold-time bspc bspc (macro C-bspc))
+  del (tap-hold-press-timeout $tap-time $hold-time del del (macro S-del))
+  , (tap-hold-press-timeout $tap-time $hold-time , , (macro S-,))
+  . (tap-hold-press-timeout $tap-time $hold-time . . (macro S-.))
+  / (tap-hold-press-timeout $tap-time $hold-time / / (macro S-/))
+  \ (tap-hold-press-timeout $tap-time $hold-time \ \ (macro S-\))
+  ' (tap-hold-press-timeout $tap-time $hold-time ' ' (macro S-'))
+)
+
+;; spacebar
+(defalias spc (tap-hold $tap-time $hold-time spc @num))
+
+;; caps word
+(defalias
+  ;; This example is similar to the default caps-word behaviour but it moves the
+  ;; 0-9 keys to the capitalized key list from the extra non-terminating key list.
+  cwc (caps-word-custom
+    2000
+    (a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9)
+    (kp0 kp1 kp2 kp3 kp4 kp5 kp6 kp7 kp8 kp9 bspc del up down left rght rsft lsft - / . ,)
+  )
+)
+
+
+(deflayer qwerty
+  @grv @1   @2   @3   @4   @5   @6   @7   @8   @9   @0   @-   @=   bspc
+  tab  q    w    e    r    t    y    u    i    o    p    @rsb @lsb @\
+  @cap @a   @s   @d   @f   g    h    @j   @k   @l   @;   @'   ret
+  lsft z    x    c    v    b    n    m    @,   @.   @/   rsft
+  lctl lmet lalt          @spc            rmet rctl
+)
+
+(deflayer navigation
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    _    _    _    $rdo _    $cpy $und _    _    $pst _    _    _
+  _    _    _    @del _    _    $l   $d   $u   $r   _    _    _   
+  _    _    $cut _    _    _    home pgdn pgup end  _    _   
+  _    _    _              @bak           _    _   
+)
+
+(deflayer numbers
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    _    @7   @8   @9   @-   _    @fun @sym _    _    _    _    _
+  @cwc @0   @4   @5   @6   @=   _    _    _    _    _    _    _   
+  _    _    @1   @2   @3   _    _    _    _    _    _    _   
+  _    _    _              _              _    _   
+)
+
+(deflayer function
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    f12  f7   f8   f9   _    _    _    _    _    _    _    _    _
+  _    f11  f4   f5   f6   _    _    _    _    _    _    _    _   
+  _    f10  f1   f2   f3   _    _    _    _    _    _    _   
+  _    _    _              _              _    _   
+)
+
+(deflayer symbols
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _   
+  _    @grv $rb  $lb  _    _    _    _    _    _    _    _    _    _
+  _    _    @rsb @lsb _    _    _    _    _    _    _    _    _   
+  _    _    @\   @/   _    _    _    _    _    _    _    _   
+  _    _    _              _              _    _   
+)
