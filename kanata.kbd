@@ -1,5 +1,7 @@
 (defcfg
   process-unmapped-keys yes
+  tray-icon                 "./icons"
+  icon-match-layer-name   	yes
 )
 
 (defsrc
