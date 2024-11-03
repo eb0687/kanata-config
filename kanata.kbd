@@ -132,7 +132,7 @@
 )
 
 (deflayer navigation
-  _    @mwu @mwd @mwl @mwr _    _    _    _    _    _    _    _    _
+  lrld @mwu @mwd @mwl @mwr _    _    _    _    _    _    _    _    _
   _    mltp @mau mrtp $rdo _    $cpy $und _    _    $pst _    _    _
   _    @mal @mad @mar _    _    $l   $d   $u   $r   _    _    _
   _    _    $cut _    _    _    home pgdn pgup end  _    _
