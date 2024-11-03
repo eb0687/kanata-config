@@ -90,8 +90,10 @@
   / (tap-hold-press-timeout $tap-time $hold-time / / (macro S-/))
   \ (tap-hold-press-timeout $tap-time $hold-time \ \ (macro S-\))
   ' (tap-hold-press-timeout $tap-time $hold-time ' ' (macro S-'))
+)
 
-  ;; mouse control
+;; mouse control
+(defalias
   mwu (mwheel-up 50 120)
   mwd (mwheel-down 50 120)
   mwl (mwheel-left 50 120)
@@ -106,6 +108,12 @@
   mal (movemouse-accel-left 1 1000 1 5)
   mad (movemouse-accel-down 1 1000 1 5)
   mar (movemouse-accel-right 1 1000 1 5)
+)
+
+;; arrow movement
+(defalias
+  crt (tap-hold-press-timeout $tap-time $hold-time rght rght (macro C-rght))
+  clt (tap-hold-press-timeout $tap-time $hold-time left left (macro C-left))
 )
 
 ;; spacebar
@@ -134,7 +142,7 @@
 (deflayer navigation
   lrld @mwu @mwd @mwl @mwr _    _    _    _    _    _    _    _    _
   _    mltp @mau mrtp $rdo _    $cpy $und _    _    $pst _    _    _
-  _    @mal @mad @mar _    _    $l   $d   $u   $r   _    _    _
+  _    @mal @mad @mar _    _    @clt $d   $u   @crt _    _    _
   _    _    $cut _    _    _    home pgdn pgup end  _    _
   _    _    _              @bak           _    _
 )
