@@ -216,8 +216,8 @@
 
 (deflayer media
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    $mte $vld $vlu _    _    _    _    _    _    _    _    _
-  _    _    $pse $prv $nxt _    _    _    _    _    _    _    _
+  _    _    $pse $prv $nxt _    _    _    _    _    _    _    _    _
+  _    _    $mte $vld $vlu _    _    _    _    _    _    _    _ 
   _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _
 )
