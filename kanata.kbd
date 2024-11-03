@@ -1,5 +1,6 @@
 (defcfg
   process-unmapped-keys yes
+  log-layer-changes no
   tray-icon                 "./icons"
   icon-match-layer-name   	yes
 )
@@ -20,15 +21,29 @@
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
+
+(deflayer media
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _
+)
 |#
 
 (defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
   tap-time 150
   hold-time 200
+
+  ;; arrow keys
   l left
   r rght
   u up
   d down
+
+  ;; modified
   rb S-9
   lb S-0
   cut C-x
@@ -36,6 +51,14 @@
   pst C-v
   und C-S-z
   rdo C-S-y
+
+  ;; media
+  vlu volu
+  vld voldwn
+  mte mute
+  nxt next
+  prv prev
+  pse pp
 )
 
 ;; esc and navigation layer toggle
@@ -53,6 +76,9 @@
 
 ;; mouse layer toggle
 (defalias mse (layer-while-held mouse))
+
+;; media layer toggle
+(defalias med (layer-while-held media))
 
 ;; home row mods
 (defalias
@@ -149,7 +175,7 @@
 
 (deflayer numbers
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    @7   @8   @9   @-   _    @fun @sym _    _    _    _    _
+  _    _    @7   @8   @9   @-   _    @fun @sym @med _    _    _    _
   @cwc @0   @4   @5   @6   @=   _    _    _    _    _    _    _
   _    _    @1   @2   @3   _    _    @mse _    _    _    _
   _    _    _              _              _    _
@@ -175,6 +201,14 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    mltp @mau mrtp _    _    _    _    _    _    _    _    _
   _    _    @mal @mad @mar _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _
+)
+
+(deflayer media
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    $mte $vld $vlu _    _    _    _    _    _    _    _    _
+  _    _    $pse $prv $nxt _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _
 )
