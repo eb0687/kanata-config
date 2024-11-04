@@ -117,6 +117,7 @@
   / (tap-hold-press-timeout $tap-time $hold-time / / (macro S-/))
   \ (tap-hold-press-timeout $tap-time $hold-time \ \ (macro S-\))
   ' (tap-hold-press-timeout $tap-time $hold-time ' ' (macro S-'))
+  f4 (tap-hold-press-timeout $tap-time $hold-time f4 f4 (macro A-f4)
 )
 
 ;; mouse control
@@ -193,7 +194,7 @@
 (deflayer function
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    f12  f7   f8   f9   _    _    _    _    _    _    _    _    _
-  _    f11  f4   f5   f6   _    _    _    _    _    _    _    _
+  _    f11  @f4   f5   f6   _    _    _    _    _    _    _    _
   _    f10  f1   f2   f3   _    _    _    _    _    _    _
   _    _    _              _              _    _
 )
