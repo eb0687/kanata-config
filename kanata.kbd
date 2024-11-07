@@ -119,7 +119,6 @@
   ' (tap-hold-press-timeout $tap-time $hold-time ' ' (macro S-'))
   f4 (tap-hold-press-timeout $tap-time $hold-time f4 f4 (macro A-f4))
   psc (tap-hold-press-timeout $tap-time $hold-time prnt prnt (macro S-prnt))
-  psc (tap-hold-press-timeout $tap-time $hold-time prnt prnt (macro S-prnt))
 )
 
 ;; mouse control
