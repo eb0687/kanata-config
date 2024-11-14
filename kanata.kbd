@@ -180,7 +180,7 @@
 
 (deflayer navigation
   lrld @mwl @mwd @mwu @mwr _    _    _    _    _    _    _    _    _
-  _    mmid mlft @mau mrgt _    $cpy $und _    _    $pst _    _    _
+  _    mmid mlft @mau mrgt _    $cpy $und mlft mrgt $pst _    _    _
   _    _    @mal @mad @mar _    @clt @cld @clu @crt _    _    _
   _    _    $cut _    _    _    home pgdn pgup end  _    _
   _    _    _              @bak           _    _
@@ -212,7 +212,7 @@
 
 (deflayer mouse
   _    @mwl @mwd @mwu @mwr _    _    _    _    _    _    _    _    _
-  _    mmtp mlft @mau mrgt _    _    _    _    _    _    _    _    _
+  _    mmtp mlft @mau mrgt _    _    _    mlft mrgt _    _    _    _
   _    _    @mal @mad @mar _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _
