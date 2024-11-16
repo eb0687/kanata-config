@@ -84,11 +84,14 @@
 ;; symbols layer toggle
 (defalias sym (layer-while-held symbols))
 
-;; mouse layer toggle
-(defalias mse (layer-while-held mouse))
-
 ;; media layer toggle
 (defalias med (layer-while-held media))
+
+;; mouse layer toggle
+(defalias mse (layer-switch mouse))
+
+;; return to base layer (qwerty)
+(defalias rtn (layer-switch qwerty))
 
 ;; home row mods
 (defalias
@@ -221,8 +224,8 @@
 
 (deflayer mouse
   _    @mwl @mwd @mwu @mwr _    _    _    _    _    _    _    _    _
-  _    mmtp mlft @mau mrgt _    _    _    mlft mrgt _    _    _    _
-  _    _    @mal @mad @mar _    _    _    _    _    _    _    _
+  _    mmtp mlft @mau mrgt _    _    _    mlft mrgt mmtp _    _    _
+  @rtn _    @mal @mad @mar _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _
 )
