@@ -70,7 +70,7 @@
   (x c) $cut 200 all-released (numbers)
   (c v) $cpy 200 all-released (numbers)
   (v b) $pst 200 all-released (numbers)
-  (k l) ret 200 all-released (numbers)
+  (k l) ret 100 all-released (numbers)
 )
 
 ;; esc and navigation layer toggle
