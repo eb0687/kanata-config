@@ -4,6 +4,7 @@
   tray-icon                 "./icons"
   icon-match-layer-name   	yes
   concurrent-tap-hold       yes
+  chords-v2-min-idle        200
 )
 
 (defsrc
@@ -66,11 +67,11 @@
 ;; combos
 ;; experimenting with combos
 (defchordsv2
+  ;; (x c) $cut 200 all-released (numbers)
+  ;; (c v) $cpy 200 all-released (numbers)
   (z x) $und 200 all-released (numbers)
-  (x c) $cut 200 all-released (numbers)
-  (c v) $cpy 200 all-released (numbers)
-  (v b) $pst 200 all-released (numbers)
-  (k l) ret 100 all-released (numbers)
+  (i u) ret 200 first-release (numbers)
+  (c v) C-bspc 200 first-release (numbers)
 )
 
 ;; esc and navigation layer toggle
@@ -85,6 +86,13 @@
 
 ;; symbols layer toggle
 (defalias sym (layer-while-held symbols))
+
+;; symbols layer toggle
+;; (defalias os1 (layer-switch symbols))
+(defalias
+  os1 (one-shot 1000 (layer-while-held symbols))
+  os2 (one-shot 1000 (layer-while-held numbers))
+)
 
 ;; media layer toggle
 (defalias med (layer-while-held media))
@@ -203,7 +211,7 @@
 (deflayer numbers
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    @7   @8   @9   @-   _    @fun @sym @med _    _    _    _
-  @cwc @0   @4   @5   @6   @=   _    _    _    _    _    _    _
+  @cwc @0   @4   @5   @6   @=   _    @os2 @os1 _    _    _    _
   _    _    @1   @2   @3   _    _    @mse _    _    _    _
   _    _    _              _              _    _
 )
@@ -217,19 +225,19 @@
 )
 
 (deflayer symbols
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    @grv $rb  $lb  _    _    _    _    _    _    _    _    _
-  _    _    _    @rsb @lsb _    _    _    _    _    _    _    _
-  _    _    _    @\   @/   _    _    _    _    _    _    _
-  _    _    _              _              _    _
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   @grv $rb  $lb  XX   XX   XX   XX   XX   XX   XX   XX   XX
+  @rtn XX   XX   @rsb @lsb XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   @\   @/   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX             XX             XX   XX
 )
 
 (deflayer mouse
-  _    @mwl @mwd @mwu @mwr _    _    _    _    _    _    _    _    _
-  _    mmtp mlft @mau mrgt _    _    _    mlft mrgt mmtp _    _    _
-  @rtn _    @mal @mad @mar _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _
+  XX   @mwl @mwd @mwu @mwr XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   mmtp mlft @mau mrgt XX   XX   XX   mlft mrgt mmtp XX   XX   XX
+  @rtn XX   @mal @mad @mar XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX             XX             XX   XX
 )
 
 (deflayer media
