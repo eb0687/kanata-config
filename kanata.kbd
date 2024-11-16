@@ -3,6 +3,7 @@
   log-layer-changes no
   tray-icon                 "./icons"
   icon-match-layer-name   	yes
+  concurrent-tap-hold       yes
 )
 
 (defsrc
@@ -60,6 +61,14 @@
   nxt next
   prv prev
   pse pp
+)
+
+;; combos
+(defchordsv2
+  (z x) $und 200 all-released (numbers)
+  (x c) $cut 200 all-released (numbers)
+  (c v) $cpy 200 all-released (numbers)
+  (v b) $pst 200 all-released (numbers)
 )
 
 ;; esc and navigation layer toggle
