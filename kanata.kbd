@@ -70,7 +70,7 @@
   ;; (x c) $cut 200 all-released (numbers)
   ;; (c v) $cpy 200 all-released (numbers)
   (z x) $und 200 all-released (numbers)
-  (i u) ret 200 first-release (numbers)
+  (l j) ret 200 first-release (numbers)
   (c v) C-bspc 200 first-release (numbers)
   (x c) tab 200 first-release (numbers)
 )
