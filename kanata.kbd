@@ -66,7 +66,7 @@
 
 ;; combos
 ;; experimenting with combos
-(defchordsv2
+(defchordsv2-experimental
   ;; (x c) $cut 200 all-released (numbers)
   ;; (c v) $cpy 200 all-released (numbers)
   (z x) $und 200 all-released (numbers)
