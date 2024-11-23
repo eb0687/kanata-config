@@ -202,27 +202,27 @@
 )
 
 (deflayer navigation
-  lrld @mwl @mwd @mwu @mwr _    _    _    _    _    _    _    _    _
-  _    mmid mlft @mau mrgt _    $cpy $und mlft mrgt $pst _    _    _
-  _    _    @mal @mad @mar _    @clt @cld @clu @crt _    _    _
-  _    _    $cut _    _    _    home pgdn pgup end  _    _
-  _    _    _              @bak           _    _
+  lrld @mwl @mwd @mwu @mwr XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   mmid mlft @mau mrgt XX   $cpy $und mlft mrgt $pst XX   XX   XX
+  XX   XX   @mal @mad @mar XX   @clt @cld @clu @crt XX   XX   XX
+  XX   XX   $cut XX   XX   XX   home pgdn pgup end  @del XX
+  XX   XX   XX             @bak           XX   XX
 )
 
 (deflayer numbers
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    @7   @8   @9   @-   _    @fun @sym @med _    _    _    _
-  @cwc @0   @4   @5   @6   @=   _    @os2 @os1 _    _    _    _
-  _    _    @1   @2   @3   _    _    @mse _    _    _    _
-  _    _    _              _              _    _
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   @7   @8   @9   @-   XX   @fun @sym @med XX   XX   XX   XX
+  @cwc @0   @4   @5   @6   @=   XX   @os2 @os1 XX   XX   XX   XX
+  XX   XX   @1   @2   @3   XX   XX   @mse XX   XX   XX   XX
+  XX   XX   XX             XX             XX   XX
 )
 
 (deflayer function
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    f12  f7   f8   f9   @psc _    _    _    _    _    _    _    _
-  _    f11  @f4   f5   f6   _    _    _    _    _    _    _    _
-  _    f10  f1   f2   f3   _    _    _    _    _    _    _
-  _    _    _              _              _    _
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   f12  f7   f8   f9   XX   XX   XX   XX   XX   @psc XX   XX   XX
+  XX   f11  @f4   f5   f6   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   f10  f1   f2   f3   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX             XX             XX   XX
 )
 
 (deflayer symbols
@@ -242,9 +242,9 @@
 )
 
 (deflayer media
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    $pse $prv $nxt _    _    _    _    _    _    _    _    _
-  _    _    $mte $vld $vlu _    _    _    _    _    _    _    _ 
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   $pse $prv $nxt XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   $mte $vld $vlu XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX             XX             XX   XX
 )
