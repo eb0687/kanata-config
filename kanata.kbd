@@ -73,6 +73,8 @@
   (c v) C-bspc 200 all-released (numbers)
   (x c) tab 200 all-released (numbers)
   (d f) esc 200 all-released (numbers)
+  (u i) [ 200 all-released (numbers)
+  (i o) ] 200 all-released (numbers)
 )
 
 ;; esc and navigation layer toggle
