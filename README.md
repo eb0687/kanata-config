@@ -1,5 +1,5 @@
 # Kanata config
 
-## todos
+## TODO
 
-- [ ] make this compatible with linux
+- [ ] this readme
