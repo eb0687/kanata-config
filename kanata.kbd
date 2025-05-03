@@ -66,9 +66,9 @@
 ;; combos
 ;; experimenting with combos
 (defchordsv2-experimental
-  ;; (x c) $cut 200 all-released (numbers)
-  ;; (c v) $cpy 200 all-released (numbers)
-  ;; (z x) $und 200 all-released (numbers)
+  ;; (x c) $cut 50 all-released (numbers)
+  ;; (c v) $cpy 50 all-released (numbers)
+  ;; (z x) $und 50 all-released (numbers)
   (l j) ret 50 all-released (numbers)
   (c v) C-bspc 50 all-released (numbers)
   (x c) tab 50 all-released (numbers)
