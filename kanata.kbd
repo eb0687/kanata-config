@@ -69,12 +69,12 @@
   ;; (x c) $cut 200 all-released (numbers)
   ;; (c v) $cpy 200 all-released (numbers)
   ;; (z x) $und 200 all-released (numbers)
-  (l j) ret 200 all-released (numbers)
-  (c v) C-bspc 200 all-released (numbers)
-  (x c) tab 200 all-released (numbers)
-  (d f) esc 200 all-released (numbers)
-  (u i) [ 200 all-released (numbers)
-  (i o) ] 200 all-released (numbers)
+  (l j) ret 50 all-released (numbers)
+  (c v) C-bspc 50 all-released (numbers)
+  (x c) tab 50 all-released (numbers)
+  (d f) esc 50 all-released (numbers)
+  (u i) [ 50 all-released (numbers)
+  (i o) ] 50 all-released (numbers)
 )
 
 ;; esc and navigation layer toggle
