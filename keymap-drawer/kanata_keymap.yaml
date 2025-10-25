@@ -1,0 +1,456 @@
+layout: {qmk_keyboard: generic/60_ansi}
+layers:
+  qwerty:
+  - {t: grv, h: grv}
+  - {t: '1', h: '1'}
+  - {t: '2', h: '2'}
+  - {t: '3', h: '3'}
+  - {t: '4', h: '4'}
+  - {t: '5', h: '5'}
+  - {t: '6', h: '6'}
+  - {t: '7', h: '7'}
+  - {t: '8', h: '8'}
+  - {t: '9', h: '9'}
+  - {t: '0', h: '0'}
+  - {t: '-', h: '-'}
+  - {t: '=', h: '='}
+  - bspc
+  - tab
+  - q
+  - w
+  - e
+  - r
+  - t
+  - (tap-dance $tap-dance-time (y C-c))
+  - u
+  - i
+  - o
+  - (tap-dance $tap-dance-time (p C-v))
+  - {t: '[', h: '['}
+  - {t: ']', h: ']'}
+  - {t: \, h: \}
+  - {t: esc, h: navigation}
+  - {t: a, h: lctl}
+  - {t: s, h: lalt}
+  - {t: d, h: lmet}
+  - {t: f, h: lsft}
+  - g
+  - h
+  - {t: j, h: rsft}
+  - {t: k, h: rmet}
+  - {t: l, h: ralt}
+  - {t: ;, h: rctl}
+  - {t: '''', h: ''''}
+  - ret
+  - lsft
+  - z
+  - (tap-dance $tap-dance-time (x C-x))
+  - c
+  - v
+  - b
+  - n
+  - m
+  - {t: ',', h: ','}
+  - {t: ., h: .}
+  - {t: /, h: /}
+  - rsft
+  - lctl
+  - lmet
+  - lalt
+  - {t: spc, h: numbers}
+  - ''
+  - rmet
+  - ''
+  - rctl
+  navigation:
+  - lrld
+  - (mwheel-left 50 120)
+  - (mwheel-down 50 120)
+  - (mwheel-up 50 120)
+  - (mwheel-right 50 120)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - mmid
+  - mlft
+  - (movemouse-accel-up 1 1000 1 5)
+  - mrgt
+  - ''
+  - C-c
+  - C-S-z
+  - mlft
+  - mrgt
+  - C-v
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - (movemouse-accel-left 1 1000 1 5)
+  - (movemouse-accel-down 1 1000 1 5)
+  - (movemouse-accel-right 1 1000 1 5)
+  - ''
+  - {t: left, h: left}
+  - {t: down, h: down}
+  - {t: up, h: up}
+  - {t: rght, h: rght}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - C-x
+  - ''
+  - ''
+  - ''
+  - home
+  - pgdn
+  - pgup
+  - end
+  - {t: del, h: del}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: bspc, h: bspc}
+  - ''
+  - ''
+  - ''
+  - ''
+  numbers:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '7', h: '7'}
+  - {t: '8', h: '8'}
+  - {t: '9', h: '9'}
+  - {t: '-', h: '-'}
+  - ''
+  - function
+  - symbols
+  - media
+  - ''
+  - ''
+  - ''
+  - ''
+  - (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9) (kp0 kp1 kp2 kp3 kp4 kp5 kp6 kp7 kp8 kp9 bspc del up down left
+    rght rsft lsft - / . ,))
+  - {t: '0', h: '0'}
+  - {t: '4', h: '4'}
+  - {t: '5', h: '5'}
+  - {t: '6', h: '6'}
+  - {t: '=', h: '='}
+  - ''
+  - {t: numbers, h: sticky}
+  - {t: symbols, h: sticky}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '1', h: '1'}
+  - {t: '2', h: '2'}
+  - {t: '3', h: '3'}
+  - ''
+  - ''
+  - {t: mouse, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  function:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - f12
+  - f7
+  - f8
+  - f9
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {t: prnt, h: prnt}
+  - ''
+  - ''
+  - ''
+  - ''
+  - f11
+  - {t: f4, h: f4}
+  - f5
+  - f6
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - f10
+  - f1
+  - f2
+  - f3
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  symbols:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: grv, h: grv}
+  - S-9
+  - S-0
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: qwerty, h: toggle}
+  - ''
+  - ''
+  - {t: '[', h: '['}
+  - {t: ']', h: ']'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: \, h: \}
+  - {t: /, h: /}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  mouse:
+  - ''
+  - (mwheel-left 50 120)
+  - (mwheel-down 50 120)
+  - (mwheel-up 50 120)
+  - (mwheel-right 50 120)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - mmtp
+  - mlft
+  - (movemouse-accel-up 1 1000 1 5)
+  - mrgt
+  - ''
+  - ''
+  - (mwheel-left 50 120)
+  - (mwheel-down 50 120)
+  - (mwheel-up 50 120)
+  - (mwheel-right 50 120)
+  - ''
+  - ''
+  - ''
+  - {t: qwerty, h: toggle}
+  - ''
+  - (movemouse-accel-left 1 1000 1 5)
+  - (movemouse-accel-down 1 1000 1 5)
+  - (movemouse-accel-right 1 1000 1 5)
+  - ''
+  - ''
+  - mlft
+  - mrgt
+  - mmtp
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  media:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - pp
+  - prev
+  - next
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - mute
+  - voldwn
+  - volu
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+combos:
+- p: [37, 35]
+  k: ret
+  l: [qwerty, navigation, function, symbols, mouse, media]
+- p: [44, 45]
+  k: C-bspc
+  l: [qwerty, navigation, function, symbols, mouse, media]
+- p: [43, 44]
+  k: tab
+  l: [qwerty, navigation, function, symbols, mouse, media]
+- p: [31, 32]
+  k: esc
+  l: [qwerty, navigation, function, symbols, mouse, media]
+- p: [21, 22]
+  k: '['
+  l: [qwerty, navigation, function, symbols, mouse, media]
+- p: [22, 23]
+  k: ']'
+  l: [qwerty, navigation, function, symbols, mouse, media]
