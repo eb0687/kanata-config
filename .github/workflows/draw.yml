@@ -28,6 +28,7 @@ jobs:
 
       - name: Draw Kanata keymap
         run: |
+          mkdir -p keymap-drawer img
           keymap -c keymap-drawer/config.yaml parse -k kanata.kbd > keymap-drawer/kanata_keymap.yaml
           keymap -c keymap-drawer/config.yaml draw keymap-drawer/kanata_keymap.yaml > img/kanata-keymap.svg
 
@@ -35,6 +36,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add keymap-drawer/kanata_keymap.yaml keymap-drawer/kanata_keymap_test.svg
+          git add keymap-drawer/kanata_keymap.yaml img/kanata-keymap.svg
           git commit -m "chore(draw): draw Kanata keymap" || true
           git push
