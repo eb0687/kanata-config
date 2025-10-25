@@ -237,8 +237,8 @@
 
 (deflayer mouse
   XX   @mwl @mwd @mwu @mwr XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   mmtp mlft @mau mrgt XX   XX   XX   mlft mrgt mmtp XX   XX   XX
-  @rtn XX   @mal @mad @mar XX   XX   XX   XX   XX   XX   XX   XX
+  XX   mmtp mlft @mau mrgt XX   XX   @mwl @mwd @mwu @mwr XX   XX   XX
+  @rtn XX   @mal @mad @mar XX   XX   mlft mrgt mmtp XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX             XX             XX   XX
 )
