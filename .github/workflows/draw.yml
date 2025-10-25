@@ -1,28 +1,40 @@
 name: Draw keymap
 on:
-  workflow_dispatch: # can be triggered manually
+  workflow_dispatch:
   push:
     paths:
       - "kanata.kbd"
       - "keymap-drawer/config.yaml"
       - ".github/workflows/draw.yml"
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@dev
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    with:
-      install_branch: "dev" # branch to install keymap-drawer from
-      keymap_patterns: "kanata.kbd" # path to the keymaps to parse
-      config_path: "keymap-drawer/config.yaml" # config file, ignored if it doesn't exist
-      output_folder: "img" # path to save produced SVGs
-      # extra_keymap_yaml: "corneish_zen:'keymap-drawer/combos.yaml'"
-      commit_message: "chore(draw): keymap"
-      fail_on_error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install keymap-drawer
+        run: pip install keymap-drawer
+
+      - name: Draw Kanata keymap
+        run: |
+          keymap -c keymap-drawer/config.yaml parse -k kanata.kbd > keymap-drawer/kanata_keymap.yaml
+          keymap -c keymap-drawer/config.yaml draw keymap-drawer/kanata_keymap.yaml > img/kanata-keymap.svg
+
+      - name: Commit and push generated SVG
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add keymap-drawer/kanata_keymap.yaml keymap-drawer/kanata_keymap_test.svg
+          git commit -m "chore(draw): draw Kanata keymap" || true
+          git push
