@@ -1,5 +1,5 @@
 # Kanata config
 
-## TODO
+Below is my personal configuration for Kanata, it is a work in progress and may change frequently.
 
-- [ ] this readme
+![keymap-drawer](img/kanata-keymap.svg)
